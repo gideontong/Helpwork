@@ -6,8 +6,10 @@ import {
 	Text,
 	View,
 	Alert,
-	Button
+	Button,
+	TextInput
 } from 'react-native';
+import { Input } from 'react-native-elements';
 import {
 	createBottomTabNavigator,
 	createStackNavigator,
@@ -25,7 +27,7 @@ class HomeScreen extends React.Component {
 	  ),
   }
   
-  row() {
+  row() {/*
 	  return (
 		    <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
                 <View style={{ flex: 1, alignSelf: 'stretch' }}>1</View>
@@ -35,10 +37,10 @@ class HomeScreen extends React.Component {
                 <View style={{ flex: 1, alignSelf: 'stretch' }}>2</View>
             </View>
 	  );
-  }
+  */}
   
   render() {
-	const data = [1, 2, 3, 4, 5];
+	// const data = [1, 2, 3, 4, 5];
     return (
 	  <View>
 	    <StatusBar
