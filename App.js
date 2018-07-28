@@ -5,8 +5,9 @@ import {
 	Text,
 	View
 } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
+class HomeScreen extends React.Component {
   render() {
     return (
 	  <View>
@@ -15,10 +16,11 @@ export default class App extends React.Component {
 		  barStyle = "dark-content"
 	    />
         <View style = {{
-			paddingTop: 20,
 			paddingLeft: 8
 		}}>
-	      <Text>Helpwork</Text>
+	      <Text style = {{
+			  fontSize: 38
+		  }}>Helpwork</Text>
           <Text>Open up App.js to start working on your app!</Text>
           <Text>Changes you make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
@@ -28,6 +30,24 @@ export default class App extends React.Component {
   }
 }
 
+class Solver extends React.Component {
+	render() {
+		
+	}
+}
+
+const RootStack = createStackNavigator({
+	Home: {
+		screen: HomeScreen
+	},
+});
+
+export default class App extends React.Component {
+	render() {
+		return <RootStack />;
+	}
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -35,3 +55,4 @@ const styles = StyleSheet.create({
 	borderTopWidth: 20,
   },
 });
+
