@@ -70,26 +70,38 @@ class SolverScreen extends React.Component {
 	
 	constructor(props) {
 		super(props);
-		this.state = {text: 'Placeholder'}
+		this.state = {text: 'Enter math equation...'}
 	}
 	
 	render() {
 		return (
 			<View style = { styles.defaultScreen }>
-				<Text>Test!</Text>
 				{/*<Input
 					placeholder='BASIC INPUT'
-				/>*/}
+				/>
+				<Text>Test</Text>
+				<View style = {{
+					flex: 1, 
+					flexDirection: 'row',
+				}}>*/}
+				<Text>Test!</Text>
 				<TextInput
+					multiline = {false}
+					clearTextOnFocus = {true}
+					enablesReturnKeyAutomatically = {true}
 					style={{
 						height: 20,
 						borderColor: 'black',
 						borderWidth: 1,
 						borderStyle: 'solid',
+						borderRadius: 6
 					}}
 					onChangeText={(text) => this.setState({text})}
 					value={this.state.text}
 				/>
+				{/*<Text>Test!</Text>
+				</View>
+				<Text>Test</Text>*/}
 			</View>
 		);
 	}
@@ -169,7 +181,7 @@ const styles = StyleSheet.create({
   defaultScreen: {
 	paddingTop: 4,
 	paddingLeft: 8,
-	paddingRight: 4
+	paddingRight: 8
   }
 });
 
