@@ -24,10 +24,7 @@ class HomeScreen extends React.Component {
 	      backgroundColor = "white"
 		  barStyle = "dark-content"
 	    />
-        <View style = {{
-			paddingTop: 4,
-			paddingLeft: 8
-		}}>
+        <View style = { styles.defaultScreen }>
           <Text>Open up App.js to start working on your app!</Text>
           <Text>Changes you make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
@@ -44,7 +41,7 @@ class SolverScreen extends React.Component {
 	
 	render() {
 		return (
-			<View>
+			<View style = { styles.defaultScreen }>
 				<Text>Test!</Text>
 			</View>
 		);
@@ -58,7 +55,7 @@ class SettingsScreen extends React.Component {
 	
 	render() {
 		return (
-			<View>
+			<View style = { styles.defaultScreen }>
 				<Text>Test!</Text>
 			</View>
 		);
