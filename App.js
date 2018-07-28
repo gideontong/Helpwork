@@ -84,7 +84,7 @@ class SolverScreen extends React.Component {
 					flex: 1, 
 					flexDirection: 'row',
 				}}>*/}
-				<Text>Test!</Text>
+				<Text>Math work checker...</Text>
 				<TextInput
 					multiline = {false}
 					clearTextOnFocus = {true}
