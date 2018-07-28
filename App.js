@@ -7,8 +7,8 @@ import {
 	View,
 	Alert,
 	Button,
+	TextInput
 } from 'react-native';
-import { Input } from 'react-native-elements';
 import {
 	createBottomTabNavigator,
 	createStackNavigator,
@@ -68,12 +68,27 @@ class SolverScreen extends React.Component {
 		title: 'Helpwork Solver'
 	}
 	
+	constructor(props) {
+		super(props);
+		this.state = {text: 'Placeholder'}
+	}
+	
 	render() {
 		return (
 			<View style = { styles.defaultScreen }>
 				<Text>Test!</Text>
-				<Input
+				{/*<Input
 					placeholder='BASIC INPUT'
+				/>*/}
+				<TextInput
+					style={{
+						height: 20,
+						borderColor: 'black',
+						borderWidth: 1,
+						borderStyle: 'solid',
+					}}
+					onChangeText={(text) => this.setState({text})}
+					value={this.state.text}
 				/>
 			</View>
 		);
@@ -153,7 +168,8 @@ const styles = StyleSheet.create({
   },
   defaultScreen: {
 	paddingTop: 4,
-	paddingLeft: 8
+	paddingLeft: 8,
+	paddingRight: 4
   }
 });
 
