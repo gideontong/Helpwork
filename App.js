@@ -1,3 +1,4 @@
+// Import Statements
 import React, { Component } from 'react';
 import {
 	StatusBar,
@@ -5,7 +6,11 @@ import {
 	Text,
 	View
 } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
+import {
+	createBottomTabNavigator,
+	createStackNavigator,
+} from 'react-navigation';
+import { Ionicons } from '@expo/vector-icons';
 
 class HomeScreen extends React.Component {
   render() {
@@ -30,17 +35,53 @@ class HomeScreen extends React.Component {
   }
 }
 
-class Solver extends React.Component {
+class SolverScreen extends React.Component {
 	render() {
-		
+		return (
+			<View>
+				<Text>Test!</Text>
+			</View>
+		);
 	}
 }
 
-const RootStack = createStackNavigator({
-	Home: {
-		screen: HomeScreen
-	},
+class SettingsScreen extends React.Component {
+	render() {
+		return (
+			<View>
+				<Text>Test!</Text>
+			</View>
+		);
+	}
+}
+
+const HomeStack = createStackNavigator({
+	Home: HomeScreen,
 });
+
+const SolverStack = createStackNavigator({
+	Solver: SolverScreen
+});
+
+const SettingsStack = createStackNavigator({
+	Settings: SettingsScreen
+});
+
+const RootStack = createBottomTabNavigator(
+	{
+		Home: HomeStack,
+		Solver: SolverStack,
+		Settings: SettingsStack,
+	},
+	{
+		navigationOptions: ({ navigation }) => ({
+			tabBarIcon: ({ focused, tintColor }) => {
+			}
+		}),
+		tabBarPosition: 'bottom',
+		initialRouteName: 'Home',
+	}
+);
 
 export default class App extends React.Component {
 	render() {
