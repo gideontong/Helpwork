@@ -13,6 +13,10 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+	  title: 'Helpwork',
+  }
+  
   render() {
     return (
 	  <View>
@@ -21,11 +25,9 @@ class HomeScreen extends React.Component {
 		  barStyle = "dark-content"
 	    />
         <View style = {{
+			paddingTop: 4,
 			paddingLeft: 8
 		}}>
-	      <Text style = {{
-			  fontSize: 38
-		  }}>Helpwork</Text>
           <Text>Open up App.js to start working on your app!</Text>
           <Text>Changes you make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
@@ -36,6 +38,10 @@ class HomeScreen extends React.Component {
 }
 
 class SolverScreen extends React.Component {
+	static navigationOptions = {
+		title: 'Helpwork Solver'
+	}
+	
 	render() {
 		return (
 			<View>
@@ -46,6 +52,10 @@ class SolverScreen extends React.Component {
 }
 
 class SettingsScreen extends React.Component {
+	static navigationOptions = {
+		title: 'Settings'
+	}
+	
 	render() {
 		return (
 			<View>
@@ -112,5 +122,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
 	borderTopWidth: 20,
   },
+  defaultScreen: {
+	paddingTop: 4,
+	paddingLeft: 8
+  }
 });
 
