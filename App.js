@@ -4,7 +4,9 @@ import {
 	StatusBar,
 	StyleSheet,
 	Text,
-	View
+	View,
+	Alert,
+	Button
 } from 'react-native';
 import {
 	createBottomTabNavigator,
@@ -15,9 +17,28 @@ import { Ionicons } from '@expo/vector-icons';
 class HomeScreen extends React.Component {
   static navigationOptions = {
 	  title: 'Helpwork',
+	  headerRight: (
+		<Button
+			onPress={() => Alert.alert('Thanks for pressing edit!')}
+			title="Edit"
+		/>
+	  ),
+  }
+  
+  row() {
+	  return (
+		    <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
+                <View style={{ flex: 1, alignSelf: 'stretch' }}>1</View>
+                <View style={{ flex: 1, alignSelf: 'stretch' }}>3</View>
+                <View style={{ flex: 1, alignSelf: 'stretch' }}>4</View>
+                <View style={{ flex: 1, alignSelf: 'stretch' }}>3</View>
+                <View style={{ flex: 1, alignSelf: 'stretch' }}>2</View>
+            </View>
+	  );
   }
   
   render() {
+	const data = [1, 2, 3, 4, 5];
     return (
 	  <View>
 	    <StatusBar
@@ -29,6 +50,13 @@ class HomeScreen extends React.Component {
           <Text>Changes you make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
         </View>
+		{/*<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            {
+                data.map((datum) => { // This will render a row for each data element.
+                    return this.row();
+                })
+            }
+        </View>*/}
 	  </View>
     );
   }
