@@ -76,8 +76,25 @@ const RootStack = createBottomTabNavigator(
 	{
 		navigationOptions: ({ navigation }) => ({
 			tabBarIcon: ({ focused, tintColor }) => {
-			}
+				const { routeName } = navigation.state;
+				let iconName;
+				if (routeName === 'Home') {
+					iconName = `ios-home${focused ? '' : '-outline'}`;
+				} else if (routeName === 'Solver') {
+					iconName = `ios-bookmarks${focused ? '' : '-outline'}`;
+				} else if (routeName === 'Settings') {
+					iconName = `ios-settings${focused ? '' : '-outline'}`;
+				}
+				
+				return <Ionicons name = { iconName } size = {35} color = { tintColor } style = {{
+					textAlign: 'center',
+					justifyContent: 'center',
+					paddingTop: 2,
+				}} />;
+			},
 		}),
+		alignItems: 'center',
+		justifyContent: 'center',
 		tabBarPosition: 'bottom',
 		initialRouteName: 'Home',
 	}
