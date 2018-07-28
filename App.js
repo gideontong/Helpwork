@@ -7,7 +7,6 @@ import {
 	View,
 	Alert,
 	Button,
-	TextInput
 } from 'react-native';
 import { Input } from 'react-native-elements';
 import {
@@ -73,6 +72,9 @@ class SolverScreen extends React.Component {
 		return (
 			<View style = { styles.defaultScreen }>
 				<Text>Test!</Text>
+				<Input
+					placeholder='BASIC INPUT'
+				/>
 			</View>
 		);
 	}
