@@ -15,6 +15,11 @@ import {
 } from 'react-navigation';
 import { Ionicons } from '@expo/vector-icons';
 
+// Wolfram Alpha API
+const WolframAlphaAPI = require('wolfram-alpha-api');
+const waApi = WolframAlphaAPI('DEMO-APPID');
+
+// Home Screen
 class HomeScreen extends React.Component {
   static navigationOptions = {
 	  title: 'Helpwork',
@@ -47,9 +52,7 @@ class HomeScreen extends React.Component {
 		  barStyle = "dark-content"
 	    />
         <View style = { styles.defaultScreen }>
-          <Text>Open up App.js to start working on your app!</Text>
-          <Text>Changes you make will automatically reload.</Text>
-          <Text>Shake your phone to open the developer menu.</Text>
+          <Text>Our home screen is coming soon!</Text>
         </View>
 		{/*<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             {
