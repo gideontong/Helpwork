@@ -1,5 +1,5 @@
 # Helpwork
-Homework helper app that tells you when your work is incorrect.
+Helpwork is a homework helper app where the idea was spawned by Gideon Tong, Logan Chiu, and Marc Choi at UCLA's Hackademia 2018 hackathon. 
 
 This app is written in React Native.
 
